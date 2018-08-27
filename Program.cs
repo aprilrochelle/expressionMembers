@@ -37,9 +37,17 @@ namespace expression_members
     // Convert this to expression method (hint: use a C# ternary)
     public string Eat(string food) =>
       (Prey.Contains(food)) ? $"{Name} ate the {food}." : $"{Name} is still hungry.";
+  }
 
+    class Program
+    {
+      static void Main ()
+      {
     Bug PrayingMantis = new Bug("Praying Mantis", "Africana", new List<string> (){"snakes", "birds", "lizards"}, new List<string> (){"ant", "cockroach", "beetle"});
 
     PrayingMantis.Eat("ant");
+
+    Console.WriteLine(PrayingMantis.Eat("ant"));
+    }
   }
 }
